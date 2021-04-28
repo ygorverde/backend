@@ -8,6 +8,8 @@ require('./config/mongodb')
 app.db = db // PostgreSQL
 app.mongoose = mongoose // MongoDB
 
+let porta = process.env.PORT || 8080
+
 consign() // Injeta em cada uma das dependências o parâmetro App.
         .include('./config/passport.js')
         .then('./config/middlewares.js')
@@ -17,6 +19,6 @@ consign() // Injeta em cada uma das dependências o parâmetro App.
         .then('./config/routes.js')
         .into(app)
 
-app.listen(3000, () => {
+app.listen(porta, () => {
     console.log('Backend executando..')
 })
