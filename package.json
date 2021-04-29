@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "production": "pm2 start index.js --name knowledge-backend"
+    "preinstall": "npm install pm2 -g",
+    "start": "pm2-runtime index.js -i max",
+    "production": "pm2 start index.js --p"
   },
   "keywords": [],
   "author": "",
