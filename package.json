@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npm install pm2 -g",
-    "start": "node index.js",
+    "start": "pm2-runtime start index.js --env production",
     "production": "pm2 start index.js --p"
   },
   "keywords": [],
