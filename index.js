@@ -18,5 +18,5 @@ consign() // Injeta em cada uma das dependências o parâmetro App.
         .into(app)
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('Backend executando...')
+    console.log('Backend executando...:', process.env.AUTHSECRET)
 })
